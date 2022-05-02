@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Primary */
+
+    --desaturated-red: hsla(0, 36%, 70%, 0.1);
+    --soft-red: hsl(0, 93%, 68%);
+
+    /* Neutral */
+
+    --dark-grayish-red: hsl(0, 6%, 24%)
+
+    /* Gradients */
+
+    --linear-one: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --linear-two: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+html{
+    font-size: 16px;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-logo{
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    padding: 1.4rem 1.95rem 1.55rem 2rem;
+    height: 10.4%;
+    /* padding: 1.8rem 2rem; */
+}
+
+.page-logo img{
+    width: 64%;
+}
+
+.page-image{
+    width: 100%;
+    height: 38%;
+}
+
+.page-image img{
+    /* width: calc(100% + 80px); */
+    width: 100%;
+    height: 82.5%;
+}
+
+.page-title{
+    animation: title-effect 1s ease forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+
+    margin-top: .8rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2.55rem;
+    letter-spacing: .68rem;
+    font-size: 2.5rem;
+}
+
+.page-title span{
+    font-weight: 300;
+    color: hsl(0, 74%, 74%);
+}
+
+.page-msg{
+    animation: p-effect 1s ease forwards;
+    opacity: 0;
+    transform: translateX(100%);
+
+    color: hsl(0, 74%, 74%);
+    /* margin-top: 1rem; */
+    font-size: .9rem;
+    line-height: 1.35rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1.1rem 1.9rem 1rem 1.9rem;
+}
+
+.page-input{
+    animation: input-effect 1s ease forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+    display: flex;
+    /* align-items: center; */
+    position: relative;
+    margin-right: 1.8rem;
+    margin-top: 1.1rem;
+}
+
+.page-input input{
+    background-color: transparent;
+    border: .1px solid hsl(0, 74%, 74%);
+    border-radius: 2rem 0  0 2rem;
+    padding: .85rem 5.5rem 1rem 1.5rem;
+}
+
+.page-input input::placeholder{
+    color: hsl(0, 74%, 74%);
+    font-size: .9rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.page-input button{
+    box-shadow: 0px 12px 10px 9px hsla(0, 74%, 74%, 0.1);
+    position: absolute;
+    left: 15.5rem; 
+    background-image: var(--linear-two);
+    border-radius: 2rem;
+    border: none;
+    padding: .9rem 1.65rem .85rem 1.65rem;
+}
+
+.page-input button img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animaciones */
+
+@keyframes title-effect{
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes p-effect{
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes input-effect{
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
