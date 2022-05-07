@@ -101,7 +101,9 @@ header img{
     border-radius: 50px;
     border: 1px solid hsla(0, 74%, 74%, 0.4);
     color: var(--desaturated-red);
-    font-size: .85rem;
+    font-size: .9rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 800;
     height: 100%;
     left: 0;
     outline: none;
@@ -125,6 +127,7 @@ header img{
 }
 
 .left-input input::placeholder{
+    font-weight: 400;
     color: var(--desaturated-red);
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -132,6 +135,22 @@ header img{
 .left-input button:hover{
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 50%, 85%));
     box-shadow: outset 0px 12px hsl(0, 50%, 85%);
+}
+
+.error-logo{
+    display: none;
+    position: absolute;
+    top: 25%;
+    right: 115%;
+}
+
+.error-msg{
+    /* display: none; */
+    margin-top: 1rem;
+    margin-left: 1.8rem;
+    color: hsla(355, 74%, 70%, 1);
+    font-weight: 800;
+    font-size: 14px;
 }
 
 .right{
@@ -217,6 +236,20 @@ header img{
 
     .left-input button{
         width: 100px;
+    }
+
+    .error-logo{
+        position: absolute;
+        right: 115%;
+        top: 25%;
+    }
+    
+    .error-msg{
+        color: hsla(355, 74%, 70%, 1);
+        font-weight: 800;
+        font-size: 1rem;
+        height: 1rem;
+        margin-left: 1.8rem;
     }
 
     .right{
