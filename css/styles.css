@@ -173,10 +173,6 @@ header img{
 /* Diseño desktop 1440px */
 
 @media screen and (min-width: 768px) {
-    html{
-        background-image: none;
-    }
-
     header{
         position: absolute;
         padding: 0; 

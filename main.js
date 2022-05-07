@@ -3,7 +3,7 @@
 const formButton = document.querySelector('button');
 const errorLogo = document.querySelector('.error-logo');
 const errorMsg = document.querySelector('.error-msg');
-const valueEmail = document.querySelector('.input-email');
+const inputEmail = document.querySelector('.input-email');
 
 let errorsCount = 0;
 
@@ -14,8 +14,9 @@ function errorContent(e){
 
     errorsCount++;
 
-    if(validateEmail(valueEmail.value)){
+    if(validateEmail(inputEmail.value)){
         errorLogo.style.display = 'none';
+        inputEmail.style.cssText = 'border: 1px solid hsla(0, 74%, 74%, 0.4);'
         errorMsg.innerHTML = 'Suscribed!';
         return;
     } 
@@ -25,6 +26,8 @@ function errorContent(e){
         errorMsg.innerHTML = `Please do it, you've already tried ${errorsCount} times!`;
         return;
     }
+
+    inputEmail.style.cssText = 'border: 2px solid hsla(355, 74%, 70%, 1);'
 
     errorLogo.style.display = 'block';
     errorMsg.innerHTML = 'Please provide a valid email';
