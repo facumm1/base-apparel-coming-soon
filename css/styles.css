@@ -33,7 +33,6 @@ html{
 
 header{
     padding: 1.9rem 0 1.7rem 2rem;
-
 }
 
 header img{
@@ -138,9 +137,94 @@ header img{
 .right{
     background-image: url('/images/hero-mobile.jpg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     height: 250px;
+}
+
+/* Para que no se rompa la imagen */
+
+@media screen and (min-width: 450px) {
+    .right{
+        background-size: contain;
+    }
+}
+
+/* Diseño desktop 1440px */
+
+@media screen and (min-width: 768px) {
+    html{
+        background-image: none;
+    }
+
+    header{
+        position: absolute;
+        padding: 0; 
+        width: 45%;
+        left: 10%;
+        top: 9%;
+    }
+
+    .container{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .left{
+        align-items: flex-start;
+        background-image: url('/images/bg-pattern-desktop.svg');
+        background-size: cover;
+        height: 100%;
+        justify-content: center;
+        padding: 0 0 0 10%;
+        text-align: left;
+    }
+
+    .title{
+        font-size: 4.1rem;
+        letter-spacing: 15.5px;
+        line-height: 4.3rem;
+        margin: 5rem 0 1.25rem 0;
+        text-align: left;
+    }
+
+    .title span{
+        font-size: 4rem;
+        letter-spacing: 17px;
+    }
+
+    .text{
+        font-size: 15.5px;
+        line-height: 28px;
+        text-align: left;
+        width: 65%;
+    }
+
+    .left-input{
+        height: 56px;
+        margin: 2.5rem 0 0 0;
+        width: 65%;
+    }
+
+    .left-input input{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .left-input button{
+        width: 100px;
+    }
+
+    .right{
+        background-image: url('/images/hero-desktop.jpg');
+        background-size: cover;
+        width: 70%;
+        height: 100%;
+    }
 }
 
 /* Animaciones */
