@@ -1,4 +1,4 @@
-"strict mode";
+'use strict';
 
 const formButton = document.querySelector('button');
 const errorLogo = document.querySelector('.error-logo');
